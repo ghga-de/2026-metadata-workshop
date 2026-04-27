@@ -1,0 +1,272 @@
+{
+  "participants": [
+    {
+      "title": "Development team",
+      "description": "Maintains the EMIM and develops the surrounding tooling — ETL processes, schemapack, the EM Transformation Service, validators, and web components.",
+      "members": [
+        "Léon Kuchenbecker",
+        "Bilge Sürün",
+        "Thomas Zajac",
+        "Byron Himes",
+        "Seyit Zor",
+        "Christoph Zwerschke"
+      ]
+    },
+    {
+      "title": "Central Data Stewardship",
+      "description": "Coordinates GHGA Data Stewardship across the consortium.",
+      "members": [
+        "Jan Eufinger",
+        "Paul Menges",
+        "Ruchi Tanavade"
+      ]
+    },
+    {
+      "title": "Data Hubs",
+      "description": "We invite each Data Hub to nominate up to three participants. Together, the nominees should cover two areas of experience: (1) supporting GHGA submissions locally, and (2) metadata collection outside of GHGA — from the local Core Unit context. How participants are distributed across these areas is up to each hub, as long as both areas are represented. Core Unit participants need not be members of the local GHGA team.",
+      "hubs": [
+        {
+          "name": "Tübingen",
+          "ghga": "Bilge Sürün",
+          "coreUnit": "TBA"
+        },
+        {
+          "name": "Heidelberg",
+          "ghga": "Paul Menges, Ruchi Tanavade",
+          "coreUnit": "Paul Menges"
+        },
+        {
+          "name": "Berlin",
+          "ghga": "TBA",
+          "coreUnit": "TBA"
+        },
+        {
+          "name": "Dresden",
+          "ghga": "TBA",
+          "coreUnit": "TBA"
+        },
+        {
+          "name": "Köln",
+          "ghga": "TBA",
+          "coreUnit": "TBA"
+        },
+        {
+          "name": "München",
+          "ghga": "TBA",
+          "coreUnit": "TBA"
+        }
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "day": "Day 1 — Wednesday, 8 July",
+      "label": "Half day · afternoon",
+      "sessions": [
+        {
+          "type": "meal",
+          "time": "12:00 – 13:00",
+          "name": "Arrival lunch"
+        },
+        {
+          "time": "13:00 – 13:45",
+          "name": "Welcome, introductions, and meeting framing",
+          "kind": "talk",
+          "kindLabel": "Plenary",
+          "description": "Welcome from the organisers, introductions among participants, and an overview of the meeting's structure and aims."
+        },
+        {
+          "type": "feature",
+          "time": "13:45 – 14:15",
+          "name": "The current GHGA EMIM",
+          "kind": "talk",
+          "kindLabel": "Talk",
+          "speakerRole": "Speaker",
+          "speaker": "Paul Menges (DKFZ)",
+          "description": "An overview of the current Experimental Metadata Ingress Model — its scope, structure, and role within GHGA submissions. Intended as common ground for the room, including Core Unit colleagues new to GHGA."
+        },
+        {
+          "type": "feature",
+          "time": "14:15 – 15:15",
+          "name": "Round 1 — Core Unit Metadata Protocols (Part 1)",
+          "kind": "talk",
+          "kindLabel": "Talks",
+          "speakerRole": "Moderator",
+          "speaker": "Léon Kuchenbecker (EKUT)",
+          "description": "Each Data Hub presents the metadata ingest protocols in use at their Core Unit — schema, tooling, and how the structured nature of the metadata is leveraged for queryability, automated pipeline execution, and other downstream uses. 30 minutes per hub, including discussion.",
+          "presentingHubs": "Berlin, Dresden"
+        },
+        {
+          "type": "break",
+          "time": "15:15 – 15:45",
+          "name": "Coffee break"
+        },
+        {
+          "type": "feature",
+          "time": "15:45 – 16:45",
+          "name": "Round 1 — Core Unit Metadata Protocols (Part 2)",
+          "kind": "talk",
+          "kindLabel": "Talks",
+          "speakerRole": "Moderator",
+          "speaker": "Léon Kuchenbecker (EKUT)",
+          "description": "Continuation of Round 1. 30 minutes per hub, including discussion.",
+          "presentingHubs": "Heidelberg, Tübingen"
+        },
+        {
+          "time": "16:45 – 17:15",
+          "name": "Day 1 reflections",
+          "kind": "discussion",
+          "kindLabel": "Open discussion",
+          "description": "A short reflection on the day's presentations and any patterns to revisit on Day 2."
+        },
+        {
+          "type": "meal",
+          "time": "19:00",
+          "name": "Dinner"
+        }
+      ]
+    },
+    {
+      "day": "Day 2 — Thursday, 9 July",
+      "label": "Full day",
+      "sessions": [
+        {
+          "type": "feature",
+          "time": "09:00 – 10:00",
+          "name": "Round 1 — Core Unit Metadata Protocols (continued)",
+          "kind": "talk",
+          "kindLabel": "Talks",
+          "speakerRole": "Moderator",
+          "speaker": "Léon Kuchenbecker (EKUT)",
+          "description": "Continuation of the Core Unit protocol presentations begun on Day 1. 30 minutes per hub, including discussion.",
+          "presentingHubs": "Köln, München"
+        },
+        {
+          "type": "break",
+          "time": "10:00 – 10:30",
+          "name": "Coffee break"
+        },
+        {
+          "type": "feature",
+          "time": "10:30 – 11:30",
+          "name": "Round 1 — Synthesis",
+          "kind": "discussion",
+          "kindLabel": "Open discussion",
+          "description": "An interactive session drawing themes across the six Core Unit presentations — points of overlap, areas of divergence, and implications for the EMIM."
+        },
+        {
+          "type": "feature",
+          "time": "11:30 – 12:30",
+          "name": "Round 2 — Experience with the GHGA EMIM",
+          "kind": "talk",
+          "kindLabel": "Talks",
+          "speakerRole": "Moderator",
+          "speaker": "Paul Menges (DKFZ)",
+          "description": "Each GHGA-experienced hub shares experiences and challenges encountered when supporting submissions through the current EMIM. Format: 10 minutes presentation + 5 minutes discussion per hub.",
+          "presentingHubs": "Berlin, Dresden, Heidelberg, Tübingen"
+        },
+        {
+          "type": "meal",
+          "time": "12:30 – 13:45",
+          "name": "Lunch"
+        },
+        {
+          "type": "feature",
+          "time": "13:45 – 14:45",
+          "name": "New EM technologies in GHGA",
+          "kind": "talk",
+          "kindLabel": "Talk",
+          "speakerRole": "Speaker",
+          "speaker": "Bilge Sürün (EKUT)",
+          "description": "An overview of recent developments in GHGA's EM technology stack — schemapack, the EM Transformation Service (EMTS), and the architecture for metadata handling after the upcoming rollout — and a discussion of what new possibilities this opens up for EM structuring."
+        },
+        {
+          "type": "break",
+          "time": "14:45 – 15:00",
+          "name": "Coffee break"
+        },
+        {
+          "type": "feature",
+          "time": "15:00 – 16:00",
+          "name": "Reflection: Archive vs. Core Unit metadata needs",
+          "kind": "discussion",
+          "kindLabel": "Open discussion",
+          "speakerRole": "Moderator",
+          "speaker": "Léon Kuchenbecker (EKUT)",
+          "description": "A joint reflection on how metadata needs differ between a data archive (such as GHGA) and a bioinformatics core facility, and what these differences imply for ingress model design."
+        },
+        {
+          "type": "break",
+          "time": "16:00 – 16:15",
+          "name": "Coffee break"
+        },
+        {
+          "type": "feature",
+          "time": "16:15 – 17:15",
+          "name": "EGA developments and GHGA–EGA compatibility",
+          "kind": "talk",
+          "kindLabel": "Talk",
+          "speakerRole": "Speaker",
+          "speaker": "Léon Kuchenbecker (EKUT)",
+          "description": "Discussion of recent EGA work on evolving experimental metadata ingress models, points of contact and divergence with current GHGA developments — particularly around metadata lifecycle management — and possible directions for the relationship going forward."
+        },
+        {
+          "type": "break",
+          "time": "17:15 – 17:30",
+          "name": "Short break"
+        },
+        {
+          "type": "feature",
+          "time": "17:30 – 18:15",
+          "name": "Open discussion: fundamental questions",
+          "kind": "discussion",
+          "kindLabel": "Open discussion",
+          "description": "An open exchange on fundamental questions facing experimental metadata — in particular, how the emergence of AI-based tooling may reshape established perspectives on capturing and structuring EM."
+        },
+        {
+          "type": "meal",
+          "time": "19:30",
+          "name": "Dinner"
+        }
+      ]
+    },
+    {
+      "day": "Day 3 — Friday, 10 July",
+      "label": "Half day · morning",
+      "sessions": [
+        {
+          "type": "feature",
+          "time": "09:00 – 10:30",
+          "name": "Synthesis: candidate directions for the year ahead",
+          "kind": "discussion",
+          "kindLabel": "Open discussion",
+          "description": "Drawing together the discussions of the previous days into a shared map of candidate directions for the EMIM in the year ahead."
+        },
+        {
+          "type": "break",
+          "time": "10:30 – 10:45",
+          "name": "Coffee break"
+        },
+        {
+          "type": "feature",
+          "time": "10:45 – 12:00",
+          "name": "Next steps and working group formation",
+          "kind": "discussion",
+          "kindLabel": "Open discussion",
+          "description": "A discussion of how to carry the work forward over the coming year, including the possibility of forming a dedicated EMIM working group."
+        },
+        {
+          "time": "12:00 – 12:15",
+          "name": "Closing remarks",
+          "kind": "talk",
+          "kindLabel": "Plenary"
+        },
+        {
+          "type": "meal",
+          "time": "12:15 – 13:30",
+          "name": "Farewell lunch and departure"
+        }
+      ]
+    }
+  ]
+}
