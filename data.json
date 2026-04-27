@@ -88,10 +88,10 @@
         {
           "type": "feature",
           "time": "14:15 – 15:15",
-          "name": "Round 1 — Core Unit Metadata Protocols (Part 1)",
+          "name": "Core Unit Metadata Protocols (Part 1)",
           "kind": "talk",
           "kindLabel": "Talks",
-          "speakerRole": "Moderator",
+          "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
           "description": "Each Data Hub presents the metadata ingest protocols in use at their Core Unit — schema, tooling, and how the structured nature of the metadata is leveraged for queryability, automated pipeline execution, and other downstream uses. 30 minutes per hub, including discussion.",
           "presentingHubs": "Berlin, Dresden"
@@ -104,10 +104,10 @@
         {
           "type": "feature",
           "time": "15:45 – 16:45",
-          "name": "Round 1 — Core Unit Metadata Protocols (Part 2)",
+          "name": "Core Unit Metadata Protocols (Part 2)",
           "kind": "talk",
           "kindLabel": "Talks",
-          "speakerRole": "Moderator",
+          "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
           "description": "Continuation of Round 1. 30 minutes per hub, including discussion.",
           "presentingHubs": "Heidelberg, Tübingen"
@@ -133,10 +133,10 @@
         {
           "type": "feature",
           "time": "09:00 – 10:00",
-          "name": "Round 1 — Core Unit Metadata Protocols (continued)",
+          "name": "Core Unit Metadata Protocols (continued)",
           "kind": "talk",
           "kindLabel": "Talks",
-          "speakerRole": "Moderator",
+          "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
           "description": "Continuation of the Core Unit protocol presentations begun on Day 1. 30 minutes per hub, including discussion.",
           "presentingHubs": "Köln, München"
@@ -149,7 +149,7 @@
         {
           "type": "feature",
           "time": "10:30 – 11:30",
-          "name": "Round 1 — Synthesis",
+          "name": "Synthesis",
           "kind": "discussion",
           "kindLabel": "Open discussion",
           "description": "An interactive session drawing themes across the six Core Unit presentations — points of overlap, areas of divergence, and implications for the EMIM."
@@ -157,10 +157,10 @@
         {
           "type": "feature",
           "time": "11:30 – 12:30",
-          "name": "Round 2 — Experience with the GHGA EMIM",
+          "name": "Experience with the GHGA EMIM",
           "kind": "talk",
           "kindLabel": "Talks",
-          "speakerRole": "Moderator",
+          "speakerRole": "Chair",
           "speaker": "Paul Menges (DKFZ)",
           "description": "Each GHGA-experienced hub shares experiences and challenges encountered when supporting submissions through the current EMIM. Format: 10 minutes presentation + 5 minutes discussion per hub.",
           "presentingHubs": "Berlin, Dresden, Heidelberg, Tübingen"
@@ -191,7 +191,7 @@
           "name": "Reflection: Archive vs. Core Unit metadata needs",
           "kind": "discussion",
           "kindLabel": "Open discussion",
-          "speakerRole": "Moderator",
+          "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
           "description": "A joint reflection on how metadata needs differ between a data archive (such as GHGA) and a bioinformatics core facility, and what these differences imply for ingress model design."
         },
