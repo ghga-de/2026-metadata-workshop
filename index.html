@@ -276,6 +276,92 @@
       font-style: italic;
     }
 
+    .cal-wrap {
+      margin-bottom: 40px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .cal-grid {
+      display: grid;
+      gap: 12px;
+      min-width: 480px;
+    }
+
+    .cal-day-header {
+      text-align: center;
+      padding: 4px 4px 10px;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cal-day-name {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.92rem;
+    }
+
+    .cal-day-label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 2px;
+    }
+
+    .cal-day-col {
+      position: relative;
+      background: var(--bg-alt);
+      border-radius: 4px;
+    }
+
+    .cal-block {
+      position: absolute;
+      left: 3px;
+      right: 3px;
+      border-radius: 2px;
+      padding: 3px 7px;
+      font-size: 0.72rem;
+      line-height: 1.25;
+      color: #1a202c;
+      overflow: hidden;
+      box-sizing: border-box;
+      cursor: default;
+    }
+
+    .cal-block-title {
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+
+    .cal-block.talk,       .cal-legend-swatch.talk       { background: #bee3f8; }
+    .cal-block.discussion, .cal-legend-swatch.discussion { background: #c6f6d5; }
+    .cal-block.meal,       .cal-legend-swatch.meal       { background: #fbd38d; }
+    .cal-block.break,      .cal-legend-swatch.break      { background: #cbd5e0; }
+
+    .cal-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .cal-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cal-legend-swatch {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+    }
+
     .day { margin-bottom: 44px; }
 
     .day-header {
@@ -529,6 +615,7 @@
     <section id="schedule">
       <div class="container">
         <h2>Schedule</h2>
+        <div id="calendar-container" class="cal-wrap"></div>
         <div id="schedule-container"></div>
       </div>
     </section>
@@ -618,6 +705,111 @@
         });
       }
 
+      function parseTime(str) {
+        if (!str) return null;
+        const dashMatch = String(str).match(/(\d{1,2}):(\d{2})\s*[–—\-]\s*(\d{1,2}):(\d{2})/);
+        if (dashMatch) {
+          return {
+            start: parseInt(dashMatch[1], 10) * 60 + parseInt(dashMatch[2], 10),
+            end: parseInt(dashMatch[3], 10) * 60 + parseInt(dashMatch[4], 10)
+          };
+        }
+        const single = String(str).match(/^\s*(\d{1,2}):(\d{2})\s*$/);
+        if (single) {
+          const t = parseInt(single[1], 10) * 60 + parseInt(single[2], 10);
+          return { start: t, end: t + 30 };
+        }
+        return null;
+      }
+
+      function eventClass(session) {
+        if (session.type === 'meal') return 'meal';
+        if (session.type === 'break') return 'break';
+        if (session.kind === 'discussion') return 'discussion';
+        return 'talk';
+      }
+
+      function renderCalendar(days, root) {
+        root.innerHTML = '';
+        if (!days || days.length === 0) return;
+
+        const PX_PER_MIN = 60 / 60; // 60 px per hour
+
+        let minStart = Infinity, maxEnd = -Infinity;
+        days.forEach(function (day) {
+          (day.sessions || []).forEach(function (s) {
+            const t = parseTime(s.time);
+            if (!t) return;
+            if (t.start < minStart) minStart = t.start;
+            if (t.end > maxEnd) maxEnd = t.end;
+          });
+        });
+        if (minStart === Infinity) return;
+
+        const calStart = Math.floor(minStart / 60) * 60;
+        const calEnd = Math.ceil(maxEnd / 60) * 60;
+        const totalHeight = (calEnd - calStart) * PX_PER_MIN;
+
+        const grid = el('div', { className: 'cal-grid' });
+        grid.style.gridTemplateColumns = 'repeat(' + days.length + ', 1fr)';
+
+        // Day headers
+        days.forEach(function (day) {
+          const dh = el('div', { className: 'cal-day-header' });
+          dh.appendChild(el('div', { className: 'cal-day-name', text: day.day || '' }));
+          if (day.label) dh.appendChild(el('div', { className: 'cal-day-label', text: day.label }));
+          grid.appendChild(dh);
+        });
+
+        // Day columns
+        days.forEach(function (day) {
+          const col = el('div', { className: 'cal-day-col' });
+          col.style.height = totalHeight + 'px';
+
+          (day.sessions || []).forEach(function (session) {
+            const t = parseTime(session.time);
+            if (!t) return;
+            const GAP = 3;
+            const top = (t.start - calStart) * PX_PER_MIN;
+            const height = Math.max(4, (t.end - t.start) * PX_PER_MIN - GAP);
+            const block = el('div', { className: 'cal-block ' + eventClass(session) });
+            block.style.top = top + 'px';
+            block.style.height = height + 'px';
+            block.title = (session.time || '') + (session.name ? ' — ' + session.name : '');
+            if (session.name) {
+              const titleEl = el('div', { className: 'cal-block-title', text: session.name });
+              const minutes = (t.end - t.start);
+              const lineClamp = minutes >= 45 ? 3 : minutes >= 25 ? 2 : 1;
+              titleEl.style.webkitLineClamp = lineClamp;
+              col.appendChild(block);
+              block.appendChild(titleEl);
+            } else {
+              col.appendChild(block);
+            }
+          });
+
+          grid.appendChild(col);
+        });
+
+        root.appendChild(grid);
+
+        // Legend
+        const legend = el('div', { className: 'cal-legend' });
+        const legendItems = [
+          { cls: 'talk', label: 'Talk' },
+          { cls: 'discussion', label: 'Discussion' },
+          { cls: 'meal', label: 'Meal' },
+          { cls: 'break', label: 'Break' }
+        ];
+        legendItems.forEach(function (item) {
+          const l = el('span', { className: 'cal-legend-item' });
+          l.appendChild(el('span', { className: 'cal-legend-swatch ' + item.cls }));
+          l.appendChild(el('span', { text: item.label }));
+          legend.appendChild(l);
+        });
+        root.appendChild(legend);
+      }
+
       function renderSchedule(days, root) {
         root.innerHTML = '';
         (days || []).forEach(function (day) {
@@ -695,6 +887,7 @@
           })
           .then(function (data) {
             renderParticipants(data.participants, participantsRoot);
+            renderCalendar(data.schedule, document.getElementById('calendar-container'));
             renderSchedule(data.schedule, scheduleRoot);
           })
           .catch(function (err) {

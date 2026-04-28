@@ -181,13 +181,8 @@
           "description": "An overview of recent developments in GHGA's EM technology stack — schemapack, the EM Transformation Service (EMTS), and the architecture for metadata handling after the upcoming rollout — and a discussion of what new possibilities this opens up for EM structuring."
         },
         {
-          "type": "break",
-          "time": "14:45 – 15:00",
-          "name": "Coffee break"
-        },
-        {
           "type": "feature",
-          "time": "15:00 – 16:00",
+          "time": "14:45 – 15:45",
           "name": "Reflection: Archive vs. Core Unit metadata needs",
           "kind": "discussion",
           "kindLabel": "Open discussion",
@@ -197,7 +192,7 @@
         },
         {
           "type": "break",
-          "time": "16:00 – 16:15",
+          "time": "15:45 – 16:15",
           "name": "Coffee break"
         },
         {
@@ -211,13 +206,8 @@
           "description": "Discussion of recent EGA work on evolving experimental metadata ingress models, points of contact and divergence with current GHGA developments — particularly around metadata lifecycle management — and possible directions for the relationship going forward."
         },
         {
-          "type": "break",
-          "time": "17:15 – 17:30",
-          "name": "Short break"
-        },
-        {
           "type": "feature",
-          "time": "17:30 – 18:15",
+          "time": "17:15 – 18:00",
           "name": "Open discussion: fundamental questions",
           "kind": "discussion",
           "kindLabel": "Open discussion",
