@@ -77,47 +77,38 @@
         },
         {
           "type": "feature",
-          "time": "13:30 – 14:15",
-          "name": "The current GHGA EMIM",
-          "kind": "talk",
-          "kindLabel": "Talk",
-          "speakerRole": "Speaker",
-          "speaker": "Paul Menges (DKFZ)",
-          "description": "An overview of the current Experimental Metadata Ingress Model — its scope, structure, and role within GHGA submissions. Intended as common ground for the room, including Core Unit colleagues new to GHGA."
-        },
-        {
-          "type": "feature",
-          "time": "14:15 – 15:15",
+          "time": "13:30 – 15:00",
           "name": "Core Unit Metadata Protocols (Part 1)",
           "kind": "talk",
           "kindLabel": "Talks",
           "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
           "description": "Each Data Hub presents the metadata ingest protocols in use at their Core Unit — schema, tooling, and how the structured nature of the metadata is leveraged for queryability, automated pipeline execution, and other downstream uses. 30 minutes per hub, including discussion.",
-          "presentingHubs": "Berlin, Dresden"
+          "presentingHubs": "Berlin, Dresden, Heidelberg"
         },
         {
           "type": "break",
-          "time": "15:15 – 15:45",
+          "time": "15:00 – 15:30",
           "name": "Coffee break"
         },
         {
           "type": "feature",
-          "time": "15:45 – 16:45",
+          "time": "15:30 – 17:00",
           "name": "Core Unit Metadata Protocols (Part 2)",
           "kind": "talk",
           "kindLabel": "Talks",
           "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
-          "description": "Continuation of Round 1. 30 minutes per hub, including discussion.",
-          "presentingHubs": "Heidelberg, Tübingen"
+          "description": "Continuation of the Core Unit protocol presentations. 30 minutes per hub, including discussion.",
+          "presentingHubs": "Köln, München, Tübingen"
         },
         {
-          "time": "16:45 – 17:15",
-          "name": "Day 1 reflections",
+          "type": "feature",
+          "time": "17:00 – 18:00",
+          "name": "Synthesis",
           "kind": "discussion",
           "kindLabel": "Open discussion",
-          "description": "A short reflection on the day's presentations and any patterns to revisit on Day 2."
+          "description": "An interactive session drawing themes across the six Core Unit presentations — points of overlap, areas of divergence, and implications for the EMIM."
         },
         {
           "type": "meal",
@@ -132,31 +123,22 @@
       "sessions": [
         {
           "type": "feature",
-          "time": "09:00 – 10:00",
-          "name": "Core Unit Metadata Protocols (continued)",
+          "time": "10:00 – 10:45",
+          "name": "The current GHGA EMIM",
           "kind": "talk",
-          "kindLabel": "Talks",
-          "speakerRole": "Chair",
-          "speaker": "Léon Kuchenbecker (EKUT)",
-          "description": "Continuation of the Core Unit protocol presentations begun on Day 1. 30 minutes per hub, including discussion.",
-          "presentingHubs": "Köln, München"
+          "kindLabel": "Talk",
+          "speakerRole": "Speaker",
+          "speaker": "Paul Menges (DKFZ)",
+          "description": "An overview of the current Experimental Metadata Ingress Model — its scope, structure, and role within GHGA submissions. Intended as common ground for the room, including Core Unit colleagues new to GHGA."
         },
         {
           "type": "break",
-          "time": "10:00 – 10:30",
+          "time": "10:45 – 11:15",
           "name": "Coffee break"
         },
         {
           "type": "feature",
-          "time": "10:30 – 11:30",
-          "name": "Synthesis",
-          "kind": "discussion",
-          "kindLabel": "Open discussion",
-          "description": "An interactive session drawing themes across the six Core Unit presentations — points of overlap, areas of divergence, and implications for the EMIM."
-        },
-        {
-          "type": "feature",
-          "time": "11:30 – 12:30",
+          "time": "11:15 – 12:15",
           "name": "Experience with the GHGA EMIM",
           "kind": "talk",
           "kindLabel": "Talks",
@@ -167,22 +149,12 @@
         },
         {
           "type": "meal",
-          "time": "12:30 – 13:45",
+          "time": "12:15 – 13:30",
           "name": "Lunch"
         },
         {
           "type": "feature",
-          "time": "13:45 – 14:45",
-          "name": "New EM technologies in GHGA",
-          "kind": "talk",
-          "kindLabel": "Talk",
-          "speakerRole": "Speaker",
-          "speaker": "Bilge Sürün (EKUT)",
-          "description": "An overview of recent developments in GHGA's EM technology stack — schemapack, the EM Transformation Service (EMTS), and the architecture for metadata handling after the upcoming rollout — and a discussion of what new possibilities this opens up for EM structuring."
-        },
-        {
-          "type": "feature",
-          "time": "14:45 – 15:45",
+          "time": "13:30 – 14:30",
           "name": "Reflection: Archive vs. Core Unit metadata needs",
           "kind": "discussion",
           "kindLabel": "Open discussion",
@@ -191,13 +163,23 @@
           "description": "A joint reflection on how metadata needs differ between a data archive (such as GHGA) and a bioinformatics core facility, and what these differences imply for ingress model design."
         },
         {
+          "type": "feature",
+          "time": "14:30 – 15:30",
+          "name": "New EM technologies in GHGA",
+          "kind": "talk",
+          "kindLabel": "Talk",
+          "speakerRole": "Speaker",
+          "speaker": "Bilge Sürün (EKUT)",
+          "description": "An overview of recent developments in GHGA's EM technology stack — schemapack, the EM Transformation Service (EMTS), and the architecture for metadata handling after the upcoming rollout — and a discussion of what new possibilities this opens up for EM structuring."
+        },
+        {
           "type": "break",
-          "time": "15:45 – 16:15",
+          "time": "15:30 – 16:00",
           "name": "Coffee break"
         },
         {
           "type": "feature",
-          "time": "16:15 – 17:15",
+          "time": "16:00 – 17:00",
           "name": "EGA developments and GHGA–EGA compatibility",
           "kind": "talk",
           "kindLabel": "Talk",
@@ -207,7 +189,7 @@
         },
         {
           "type": "feature",
-          "time": "17:15 – 18:00",
+          "time": "17:00 – 17:45",
           "name": "Open discussion: fundamental questions",
           "kind": "discussion",
           "kindLabel": "Open discussion",
@@ -226,11 +208,19 @@
       "sessions": [
         {
           "type": "feature",
-          "time": "09:00 – 10:30",
-          "name": "Synthesis: candidate directions for the year ahead",
+          "time": "09:00 – 09:30",
+          "name": "Data Submissions and Data Access Requests",
+          "kind": "talk",
+          "kindLabel": "Talk",
+          "speakerRole": "Speaker",
+          "speaker": "Jan Eufinger"
+        },
+        {
+          "type": "feature",
+          "time": "09:30 – 10:30",
+          "name": "Data Submissions and Data Access Requests",
           "kind": "discussion",
-          "kindLabel": "Open discussion",
-          "description": "Drawing together the discussions of the previous days into a shared map of candidate directions for the EMIM in the year ahead."
+          "kindLabel": "Open discussion"
         },
         {
           "type": "break",
