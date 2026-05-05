@@ -82,6 +82,59 @@
       color: var(--muted);
     }
 
+    .content-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 12px;
+    }
+
+    .content-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .content-list li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .content-list li strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .rounds {
+      margin: 18px 0 28px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .round {
+      background: var(--bg-alt);
+      padding: 18px 22px;
+      border-radius: 6px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .round h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .round p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
     .goals {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -567,8 +620,38 @@
   <main>
     <section id="overview">
       <div class="container">
-        <h2>About this meeting</h2>
-        <p class="lead">A three-day consortium meeting to reconnect on the GHGA Experimental Metadata Ingress Model (EMIM), share experiences from across the federated Data Hubs, and explore directions for its continued evolution as we approach the next major ETL release.</p>
+        <h2>Background</h2>
+        <p class="lead">With the rollout of the service-driven file upload into GHGA currently underway, the development focus will shift towards improving metadata ingest and management. In 2026, this area will see a major overhaul, and we would like to take this opportunity to bring everyone up to speed on what is changing, gather practical experience from across the Data Hubs, and restart the consortium-wide conversation around metadata.</p>
+        <p>In short, the picture looks like this:</p>
+        <ul class="content-list">
+          <li>The current "GHGA Metadata Schema" will be decluttered from all non-experimental aspects — DAC, Study, Dataset, Publication, etc. — and will focus solely on capturing the experimental process that lead to the Research Data generation from the submitters. To reflect this narrower scope, we now refer to it as the <strong>Experimental Metadata Ingress Model (EMIM)</strong>.</li>
+          <li>The other entities formerly handled by the metadata model will be managed dynamically and directly through the data portal.</li>
+          <li>Metadata will be submitted to and processed by the service back end, rather than via offline tooling on a central data steward VM. The process itself will still be executed by data stewards only.</li>
+          <li>The new architecture will allow us to handle changes to the EMIM over time, and even to actively run multiple EMIMs in parallel.</li>
+        </ul>
+        <p>The workshop aims to bring together the development team, the central Data Stewardship team, and representatives from all participating Data Hubs.</p>
+      </div>
+    </section>
+
+    <section id="structure">
+      <div class="container">
+        <h2>Workshop structure</h2>
+        <p>The programme is built around three main presentation rounds:</p>
+        <div class="rounds">
+          <div class="round">
+            <h3>Core Unit Metadata Protocols</h3>
+            <p>Staff from the Data Hubs or adjacent institutions with Core Unit experience present how experimental metadata is captured, structured, and used at their Core Unit — schema, tooling, queryability, automated pipelines etc. The focus is on how the topic is handled independently of GHGA.</p>
+          </div>
+          <div class="round">
+            <h3>Experience with the current GHGA Metadata Schema</h3>
+            <p>The Data Hubs already live in production (Berlin, Dresden, Heidelberg, Tübingen) share their hands-on experience and the challenges encountered when supporting GHGA submissions.</p>
+          </div>
+          <div class="round">
+            <h3>GHGA Metadata Framework v2</h3>
+            <p>The GHGA development team presents the upcoming Metadata Framework and its components — the schemapack library as a modelling framework, alongside the related GHGA tooling and microservice architecture.</p>
+          </div>
+        </div>
+        <p>Building on the shared ground established by these rounds, the workshop continues with reflections, topic-specific discussions, and sessions aimed at shaping the next steps for the EMIM going forward.</p>
       </div>
     </section>
 

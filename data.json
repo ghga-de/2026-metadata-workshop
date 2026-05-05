@@ -135,12 +135,12 @@
         {
           "type": "feature",
           "time": "10:15 – 11:15",
-          "name": "Experience with the GHGA EMIM",
+          "name": "Experience with the current GHGA Metadata Model",
           "kind": "talk",
           "kindLabel": "Talks",
           "speakerRole": "Chair",
           "speaker": "Paul Menges (DKFZ)",
-          "description": "Each GHGA-experienced hub shares experiences and challenges encountered when supporting submissions through the current EMIM. Format: 10 minutes presentation + 5 minutes discussion per hub.",
+          "description": "Each GHGA-experienced hub shares experiences and challenges encountered when supporting submissions through the current model. Format: 10 minutes presentation + 5 minutes discussion per hub.",
           "presentingHubs": "Berlin, Dresden, Heidelberg, Tübingen"
         },
         {
