@@ -2,7 +2,6 @@
   "participants": [
     {
       "title": "Development team",
-      "description": "Maintains the EMIM and develops the surrounding tooling — ETL processes, schemapack, the EM Transformation Service, validators, and web components.",
       "members": [
         "Léon Kuchenbecker",
         "Further participants TBA"
@@ -10,11 +9,12 @@
     },
     {
       "title": "Central Data Stewardship",
-      "description": "Coordinates GHGA Data Stewardship across the consortium.",
       "members": [
         "Jan Eufinger",
+        "Karoline Mauer",
         "Paul Menges",
-        "Ruchi Tanavade"
+        "Ruchi Tanavade",
+        "Further participants TBA"
       ]
     },
     {
