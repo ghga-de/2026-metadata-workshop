@@ -20,12 +20,61 @@
       --border: #e2e8f0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+    }
+
+    section {
+      scroll-margin-top: 64px;
+    }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+
+    .main-nav .container {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .main-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      white-space: nowrap;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--accent);
+    }
+
+    @media (max-width: 560px) {
+      .main-nav .container { gap: 18px; }
+      .main-nav a { font-size: 0.85rem; }
     }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -616,6 +665,16 @@
       </div>
     </div>
   </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="#overview">About</a>
+      <a href="#structure">Structure</a>
+      <a href="#location">Location</a>
+      <a href="#participants">Participants</a>
+      <a href="#schedule">Schedule</a>
+    </div>
+  </nav>
 
   <main>
     <section id="overview">
