@@ -123,7 +123,7 @@
       "sessions": [
         {
           "type": "feature",
-          "time": "10:00 – 10:45",
+          "time": "09:00 – 09:45",
           "name": "The current GHGA EMIM",
           "kind": "talk",
           "kindLabel": "Talk",
@@ -133,12 +133,12 @@
         },
         {
           "type": "break",
-          "time": "10:45 – 11:15",
+          "time": "09:45 – 10:15",
           "name": "Coffee break"
         },
         {
           "type": "feature",
-          "time": "11:15 – 12:15",
+          "time": "10:15 – 11:15",
           "name": "Experience with the GHGA EMIM",
           "kind": "talk",
           "kindLabel": "Talks",
@@ -148,13 +148,8 @@
           "presentingHubs": "Berlin, Dresden, Heidelberg, Tübingen"
         },
         {
-          "type": "meal",
-          "time": "12:15 – 13:30",
-          "name": "Lunch"
-        },
-        {
           "type": "feature",
-          "time": "13:30 – 14:30",
+          "time": "11:15 – 12:15",
           "name": "Reflection: Archive vs. Core Unit metadata needs",
           "kind": "discussion",
           "kindLabel": "Open discussion",
@@ -163,8 +158,13 @@
           "description": "A joint reflection on how metadata needs differ between a data archive (such as GHGA) and a bioinformatics core facility, and what these differences imply for ingress model design."
         },
         {
+          "type": "meal",
+          "time": "12:15 – 13:30",
+          "name": "Lunch"
+        },
+        {
           "type": "feature",
-          "time": "14:30 – 15:30",
+          "time": "13:30 – 14:30",
           "name": "New EM technologies in GHGA",
           "kind": "talk",
           "kindLabel": "Talk",
@@ -174,26 +174,20 @@
         },
         {
           "type": "break",
-          "time": "15:30 – 16:00",
+          "time": "14:30 – 15:00",
           "name": "Coffee break"
         },
         {
           "type": "feature",
-          "time": "16:00 – 17:00",
-          "name": "EGA developments and GHGA–EGA compatibility",
-          "kind": "talk",
-          "kindLabel": "Talk",
-          "speakerRole": "Speaker",
-          "speaker": "Léon Kuchenbecker (EKUT)",
-          "description": "Discussion of recent EGA work on evolving experimental metadata ingress models, points of contact and divergence with current GHGA developments — particularly around metadata lifecycle management — and possible directions for the relationship going forward."
+          "time": "15:00 – 17:45",
+          "name": "To be announced",
+          "placeholder": true
         },
         {
-          "type": "feature",
-          "time": "17:00 – 17:45",
-          "name": "Open discussion: fundamental questions",
-          "kind": "discussion",
-          "kindLabel": "Open discussion",
-          "description": "An open exchange on fundamental questions facing experimental metadata — in particular, how the emergence of AI-based tooling may reshape established perspectives on capturing and structuring EM."
+          "type": "meal",
+          "time": "18:00 – 19:30",
+          "name": "Social event (TBA)",
+          "placeholder": true
         },
         {
           "type": "meal",
@@ -224,22 +218,14 @@
         },
         {
           "type": "break",
-          "time": "10:30 – 10:45",
+          "time": "10:30 – 11:00",
           "name": "Coffee break"
         },
         {
           "type": "feature",
-          "time": "10:45 – 12:00",
-          "name": "Next steps and working group formation",
-          "kind": "discussion",
-          "kindLabel": "Open discussion",
-          "description": "A discussion of how to carry the work forward over the coming year, including the possibility of forming a dedicated EMIM working group."
-        },
-        {
-          "time": "12:00 – 12:15",
-          "name": "Closing remarks",
-          "kind": "talk",
-          "kindLabel": "Plenary"
+          "time": "11:00 – 12:15",
+          "name": "To be announced",
+          "placeholder": true
         },
         {
           "type": "meal",

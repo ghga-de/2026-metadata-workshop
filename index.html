@@ -335,10 +335,23 @@
       -webkit-box-orient: vertical;
     }
 
-    .cal-block.talk,       .cal-legend-swatch.talk       { background: #bee3f8; }
-    .cal-block.discussion, .cal-legend-swatch.discussion { background: #c6f6d5; }
-    .cal-block.meal,       .cal-legend-swatch.meal       { background: #fbd38d; }
-    .cal-block.break,      .cal-legend-swatch.break      { background: #cbd5e0; }
+    .cal-block.talk,       .cal-legend-swatch.talk       { background-color: #bee3f8; }
+    .cal-block.discussion, .cal-legend-swatch.discussion { background-color: #c6f6d5; }
+    .cal-block.meal,       .cal-legend-swatch.meal       { background-color: #fbd38d; }
+    .cal-block.break,      .cal-legend-swatch.break      { background-color: #cbd5e0; }
+
+    .cal-block.placeholder,
+    .cal-legend-swatch.placeholder {
+      background-color: #d6dde5;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0,
+        transparent 6px,
+        rgba(0, 0, 0, 0.18) 6px,
+        rgba(0, 0, 0, 0.18) 8px
+      );
+      color: #2d3748;
+    }
 
     .cal-legend {
       display: flex;
@@ -551,26 +564,6 @@
       </div>
     </section>
 
-    <section id="goals">
-      <div class="container">
-        <h2>Goals</h2>
-        <div class="goals">
-          <div class="goal">
-            <h3>Resume the conversation</h3>
-            <p>Restart consortium-wide dialogue on the EMIM and welcome new colleagues into the discussion.</p>
-          </div>
-          <div class="goal">
-            <h3>Bridge two perspectives</h3>
-            <p>Build shared understanding between the EMIM development team and the Data Stewards working at the interface with experimentalists in the Core Units.</p>
-          </div>
-          <div class="goal">
-            <h3>Sketch the path ahead</h3>
-            <p>Surface candidate directions for the EMIM going forward and explore whether a working group can carry the work through the coming year.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="location">
       <div class="container">
         <h2>Location</h2>
@@ -772,7 +765,7 @@
             const GAP = 3;
             const top = (t.start - calStart) * PX_PER_MIN;
             const height = Math.max(4, (t.end - t.start) * PX_PER_MIN - GAP);
-            const block = el('div', { className: 'cal-block ' + eventClass(session) });
+            const block = el('div', { className: 'cal-block ' + eventClass(session) + (session.placeholder ? ' placeholder' : '') });
             block.style.top = top + 'px';
             block.style.height = height + 'px';
             block.title = (session.time || '') + (session.name ? ' — ' + session.name : '');
@@ -799,7 +792,8 @@
           { cls: 'talk', label: 'Talk' },
           { cls: 'discussion', label: 'Discussion' },
           { cls: 'meal', label: 'Meal' },
-          { cls: 'break', label: 'Break' }
+          { cls: 'break', label: 'Break' },
+          { cls: 'placeholder', label: 'Placeholder' }
         ];
         legendItems.forEach(function (item) {
           const l = el('span', { className: 'cal-legend-item' });
