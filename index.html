@@ -222,6 +222,15 @@
       flex-shrink: 0;
     }
 
+    .person.tba {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .person.tba::before {
+      display: none;
+    }
+
     .hubs {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -660,7 +669,8 @@
           if (Array.isArray(group.members)) {
             const peopleEl = el('div', { className: 'people' });
             group.members.forEach(function (name) {
-              peopleEl.appendChild(el('span', { className: 'person', text: name }));
+              const isTBA = /\bTBA\b|to be announced/i.test(String(name));
+              peopleEl.appendChild(el('span', { className: 'person' + (isTBA ? ' tba' : ''), text: name }));
             });
             groupEl.appendChild(peopleEl);
           }
