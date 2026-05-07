@@ -671,7 +671,6 @@
       <a href="#overview">About</a>
       <a href="#structure">Structure</a>
       <a href="#location">Location</a>
-      <a href="#participants">Participants</a>
       <a href="#schedule">Schedule</a>
     </div>
   </nav>
@@ -744,14 +743,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="participants">
-      <div class="container">
-        <h2>Participants</h2>
-        <p>The meeting brings together the EMIM development team, the central Data Stewardship team, and representatives from the participating Data Hubs.</p>
-        <div id="participants-container"></div>
       </div>
     </section>
 
@@ -1031,15 +1022,16 @@
             return res.json();
           })
           .then(function (data) {
-            renderParticipants(data.participants, participantsRoot);
-            renderCalendar(data.schedule, document.getElementById('calendar-container'));
-            renderSchedule(data.schedule, scheduleRoot);
+            if (participantsRoot) renderParticipants(data.participants, participantsRoot);
+            const calendarRoot = document.getElementById('calendar-container');
+            if (calendarRoot) renderCalendar(data.schedule, calendarRoot);
+            if (scheduleRoot) renderSchedule(data.schedule, scheduleRoot);
           })
           .catch(function (err) {
             console.error('Failed to load data.json:', err);
             const msg = 'Could not load <code>data.json</code>. If you are opening this file directly from disk, serve it via a local web server (e.g. <code>python3 -m http.server</code>) and reload the page.';
-            showError(participantsRoot, msg);
-            showError(scheduleRoot, msg);
+            if (participantsRoot) showError(participantsRoot, msg);
+            if (scheduleRoot) showError(scheduleRoot, msg);
           });
       }
 
