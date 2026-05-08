@@ -24,7 +24,7 @@
           "kindLabel": "Talks",
           "speakerRole": "Chair",
           "speaker": "Léon Kuchenbecker (EKUT)",
-          "description": "Each Data Hub presents the metadata ingest protocols in use at their Core Unit — schema, tooling, and how the structured nature of the metadata is leveraged for queryability, automated pipeline execution, and other downstream uses. 30 minutes per hub, including discussion.",
+          "description": "Each Data Hub presents the metadata ingest protocols in use at their Core Unit — schema, tooling, ETL processes, queryability, automated pipeline execution, universal vs modality-specific metadata schemas. 30 minutes per hub, including discussion.",
           "presentingHubs": "Berlin, Dresden, Heidelberg"
         },
         {
