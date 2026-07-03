@@ -23,7 +23,7 @@
           "kind": "talk",
           "kindLabel": "Talks",
           "speakerRole": "Speakers",
-          "speaker": "Jan Eufinger (GHGA Central), Léon Kuchenbecker (EKUT)"
+          "speaker": "Jan Eufinger, Léon Kuchenbecker"
         },
         {
           "type": "feature",
@@ -173,8 +173,8 @@
         {
           "type": "meal",
           "time": "16:30 – 18:00",
-          "name": "Social event (TBA, self-paid)",
-          "description": "Location to be confirmed: BeachMitte, Caroline-Michaelis-Straße 8."
+          "name": "Social event",
+          "description": "Walk across Berlin-Mitte, ending at dinner location"
         },
         {
           "type": "meal",
