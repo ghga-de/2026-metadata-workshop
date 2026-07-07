@@ -47,7 +47,7 @@
           "kind": "talk",
           "kindLabel": "Talk",
           "speakerRole": "Speaker",
-          "speaker": "Dieter Beule (Berlin)"
+          "speaker": "Dieter Beule"
         },
         {
           "type": "feature",
@@ -56,7 +56,7 @@
           "kind": "talk",
           "kindLabel": "Talks",
           "speakerRole": "Chair",
-          "speaker": "Paul Menges (DKFZ)",
+          "speaker": "Paul Menges",
           "description": "GHGA-experienced hubs present experiences and challenges with the current metadata model. 10-minute presentation + 5-minute discussion per hub.",
           "presentingHubs": "Berlin, Dresden, Tübingen, Heidelberg"
         },
@@ -86,7 +86,7 @@
           "kind": "talk",
           "kindLabel": "Talk",
           "speakerRole": "Speaker",
-          "speaker": "To be announced",
+          "speaker": "Eric Blanc , Miha Milek",
           "description": "20-minute presentation + 10-minute discussion."
         },
         {
